@@ -10,6 +10,21 @@ app.use(express.json());
 
 let users = [];
 
+app.get('/', (req, res) => {
+  res.json({
+    message: 'User Management API',
+    endpoints: {
+      getAll: '/users',
+      getOne: '/users/:id',
+      create: 'POST /users',
+      update: 'PUT /users/:id',
+      delete: 'DELETE /users/:id'
+    }
+  });
+});
+
+
+
 app.get('/users', (req, res) => {
   const {search,sort,order} = req.query;
 
