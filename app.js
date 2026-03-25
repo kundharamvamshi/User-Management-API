@@ -14,11 +14,11 @@ app.get('/', (req, res) => {
   res.json({
     message: 'User Management API',
     endpoints: {
-      getAll: '/users',
-      getOne: '/users/:id',
-      create: 'POST /users',
-      update: 'PUT /users/:id',
-      delete: 'DELETE /users/:id'
+      getAllUsers: '/users',
+      getOneUser: '/users/:id',
+      createUser: 'POST /users',
+      updateUser: 'PUT /users/:id',
+      deleteUser: 'DELETE /users/:id'
     }
   });
 });
